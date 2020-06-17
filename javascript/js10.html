@@ -1,0 +1,72 @@
+<script>
+//함수 호출 시 변수에 값을 담는 상황
+
+//1. 함수() 호출 => 호출결과(반환값)가 변수에 저장
+//2. 함수() 호출 => 함수코드(원형)가 변수에 저장
+
+// 함수 호출 시 ()를 붙이면 함수 실행을 의미
+function count(){
+    var num = 1;
+    return function(){
+        num++;
+        return num;
+    }
+}
+var temp = count(); //클로저 closure    
+// 지역변수가 계속 기억되는 현상
+console.log(temp());
+console.log(temp());
+console.log(temp());
+console.log(temp());
+console.log(temp());
+console.log(temp());
+
+
+
+
+
+
+
+
+function method() {
+    var age = 100;
+    
+}
+
+function c(){
+    return function(){
+    return 77;
+    }
+   }
+var ccc = c();          // var ccc = c()();
+var ccc2 = ccc();      
+   alert(ccc2);
+
+function b(){
+    return 11;
+   }
+
+function a(){
+    alert(1);
+    }
+  
+var bb =b();
+var aa =a();
+    console.log(bb, aa);
+  
+   
+    //     function get_member1(){
+    //     return 'egoing';
+    // }
+    
+    // function get_member2(){
+    //     return 'k8805';
+    // }
+    
+    // alert(get_member1());
+    // alert(get_member2());
+    // var my =a;
+    // console.log(my);
+    // my();
+    // a();
+</script>

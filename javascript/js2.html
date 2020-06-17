@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script>
+      //function alert 
+      //function print() x 
+      var alert = function() {
+
+        }
+        
+        
+        var add2 = function () {
+            var tag = "";
+            tag += "<tr>";
+            tag += "<td>A</td><td>B</td>";
+            tag += "</tr>";
+            document.querySelector("#table")
+                .innerHTML += tag;
+        };
+
+
+        var add = function () {
+            var tag = "";
+            tag += "<ul>";
+            tag += "<li>Test</li>";
+            tag += "</ul>";
+            document.body.innerHTML += tag;
+        };
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Tag Change" onclick="add()">
+
+    <table id="table" onclick="add2()">
+        <tr>
+            <td>이름</td>
+            <td>혈액형</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
+<!-- 자바
+숫자 => 문자열 숫자 + ""
+문자열 => 숫자 integer.parselnt(문자열);
+
+자바스크립트
+숫자 => 문자열  신경안써도됨 (숫자 + "")
+                parselnt(문자열);
+문자열 => 숫자 문자열*1 또는 문자열 /1
+                number(문자열); -->
